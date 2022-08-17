@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman <?= $data['judul']; ?></title>
+    <link rel="stylesheet" type="text/css" href="<?= BASEURL ?>/datatables.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <script src="https://kit.fontawesome.com/9068109a15.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="<?= BASEURL?>/datatables.min.js"></script>
+    <link href="<?= BASEURL ?>/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href='<?= BASEURL ?>/css/style.css'>
+    
+</head>
+<body>
+<div class="nav mt-5">
+<nav class="navbar  fixed-top">
+  <div class="container-fluid">
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">-></button>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>  
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link <?= ($data['judul'] === "Home") ? "active" : ''?>" aria-current="page" href="<?= BASEURL ?>/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <?= ($data['judul'] === "Daftar Admin") ? "active" : ''?>" href="<?= BASEURL ?>/admin">Admin</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Data Master
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+              <li><a class="dropdown-item <?= ($data['judul'] === "Daftar Produk") ? "active" : ''?>" href="<?= BASEURL; ?>/produk">Data Produk</a></li>
+              <li><a class="dropdown-item" href="<?= BASEURL; ?>/about">Data Customer</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Data Transaksi
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+              <li><a class="dropdown-item" href="#">Produk Masuk</a></li>
+              <li><a class="dropdown-item" href="#">Produk Keluar</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
