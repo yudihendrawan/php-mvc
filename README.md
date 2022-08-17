@@ -1,4 +1,4 @@
-# php-mvc
+# program penelolaan data dengan studi kasus Gerai Sari Pasundan
 
 Sebuah Program penegelolaan data menggunakan PHP MVC. di buat dengan ototdidak dan menerapkan banyak bantuan dari tutorial di internet
 
